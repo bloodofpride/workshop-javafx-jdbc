@@ -1,4 +1,4 @@
-package com.br.workshopjavafxjdbc;
+package com.br.workshopjavafxjdbc.gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
