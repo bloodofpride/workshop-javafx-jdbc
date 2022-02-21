@@ -32,21 +32,21 @@ public class MainViewController implements Initializable {
 
     @FXML
     public void onMenuItemDepartmentAction(){
-        System.out.println("onMenuItemDepartmentAction");
+        loadView("DepartmentList.fxml");
     }
 
     @FXML
     public void onMenuItemAboutAction(){
-        loadView();
+        loadView("About.fxml");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
 
-    private synchronized void loadView(){
+    private synchronized void loadView(String absoluteName){
         try {
-            URL fxmlLocation = getClass().getResource ("About.fxml");
+            URL fxmlLocation = getClass().getResource (absoluteName);
             FXMLLoader loader = new FXMLLoader(fxmlLocation);
             VBox newVbox = loader.load();
 
