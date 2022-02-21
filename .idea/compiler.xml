@@ -13,4 +13,9 @@
       <module name="workshop-javafx-jdbc" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="workshop-javafx-jdbc" options="--add-exports java.xml/jdk.xml.internal=com.br.workshopjavafxjdbc" />
+    </option>
+  </component>
 </project>
