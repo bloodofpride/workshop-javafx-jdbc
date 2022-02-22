@@ -1,19 +1,19 @@
 package com.br.workshopjavafxjdbc.model.services;
 
 import com.br.workshopjavafxjdbc.model.dao.DaoFactory;
-import com.br.workshopjavafxjdbc.model.dao.DepartmentDao;
-import com.br.workshopjavafxjdbc.model.entities.Department;
+import com.br.workshopjavafxjdbc.model.dao.SellerDao;
+import com.br.workshopjavafxjdbc.model.entities.Seller;
 
 import java.util.List;
 
-public class DepartmentService {
-    private DepartmentDao dao = DaoFactory.createDepartmentDao();
+public class SellerService {
+    private SellerDao dao = DaoFactory.createSellerDao();
 
-    public List<Department> findAll() {
+    public List<Seller> findAll() {
         return dao.findAll();
     }
 
-    public void saveOrUpdate(Department obj) {
+    public void saveOrUpdate(Seller obj) {
         if (obj.getId() == null) {
             dao.insert(obj);
         }
@@ -22,7 +22,7 @@ public class DepartmentService {
         }
     }
 
-    public void remove(Department obj) {
+    public void remove(Seller obj) {
         dao.deleteById(obj.getId());
     }
 }
